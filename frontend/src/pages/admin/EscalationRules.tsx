@@ -18,8 +18,8 @@ export default function EscalationRules() {
   const { data: rulesData } = useQuery({ queryKey: ['escalation', 'rules'], queryFn: () => adminAPI.getEscalationRules().then((r) => r.data) })
   const { data: logsData } = useQuery({ queryKey: ['escalation', 'logs'], queryFn: () => adminAPI.getEscalationLogs().then((r) => r.data) })
   
-  const rules = Array.isArray(rulesData?.items) ? rulesData.items : Array.isArray(rulesData) ? rulesData : []
-  const logs = Array.isArray(logsData?.items) ? logsData.items : Array.isArray(logsData) ? logsData : []
+  const rules = (Array.isArray(rulesData?.items) ? rulesData.items : Array.isArray(rulesData) ? rulesData : []) as EscalationRule[]
+  const logs = (Array.isArray(logsData?.items) ? logsData.items : Array.isArray(logsData) ? logsData : []) as EscalationLog[]
 
   const createRule = useMutation({
     mutationFn: (data: unknown) => editRule ? adminAPI.updateEscalationRule(editRule.id, data) : adminAPI.createEscalationRule(data),

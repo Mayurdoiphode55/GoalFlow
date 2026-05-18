@@ -7,7 +7,6 @@ import type { Column } from '../../components/shared/DataTable'
 import { StatusBadge } from '../../components/shared/StatusBadge'
 import { EmptyState } from '../../components/shared/EmptyState'
 import { adminAPI } from '../../lib/api'
-import type { AuditLog } from '../../types/api'
 import { formatDate } from '../../lib/utils'
 
 export default function AuditLogs() {
