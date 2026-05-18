@@ -1,0 +1,69 @@
+# =========================
+# General
+# =========================
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.tmp
+*.bak
+
+# =========================
+# Frontend (Node.js / React / Vite)
+# =========================
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.eslintcache
+
+# =========================
+# Backend (Python / FastAPI)
+# =========================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+backend/venv/
+backend/.venv/
+venv/
+.venv/
+env/
+.env_python/
+
+# Database files
+backend/*.sqlite
+backend/*.sqlite3
+backend/*.db
+
+# Environment variables
+backend/.env
+backend/.env.local
+backend/.env.*.local
+.env
+
+# Testing and coverage
+backend/.pytest_cache/
+backend/htmlcov/
+backend/.coverage
+backend/.tox/
+
+# IDEs
+backend/.vscode/
+backend/.idea/
+
+# Distribution / packaging
+backend/dist/
+backend/build/
+backend/*.egg-info/
+
+prompt.md
+prompt-*.md
+frontend.md
